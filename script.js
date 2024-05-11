@@ -99,3 +99,27 @@ switchMode.addEventListener('change', function () {
 		document.body.classList.remove('dark');
 	}
 })
+
+
+
+var popup = document.querySelector(".popup")
+        ;
+        var dismiss = document.querySelector(".popup__dismiss");
+        var shop = document.querySelector(".popup__shop");
+
+        setTimeout(function(){
+            popup.classList.add("popup--show")
+        },1000);
+
+        dismiss.addEventListener("click", function(){
+            console.log("klik dismiss");
+            popup.classList.remove("popup--show");
+            popup.classList.add("popup--close");
+        })
+
+        shop.addEventListener("click", function(){
+            console.log("klik shop");
+            popup.classList.remove("popup--show");
+            popup.classList.add("popup--close");
+            alert("Selamat datang di STM Pondok Alam");
+        })
